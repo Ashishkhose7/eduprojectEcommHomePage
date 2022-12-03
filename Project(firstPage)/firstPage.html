@@ -19,19 +19,20 @@
 </head>
 
 <body>
-  <script src="./firstPage.js"></script>
+  <div id="coupen-code">
+    <button id="btn" onclick="closeCoupen()">&times;</button>
+    <a href="./firstPage.html"><img src="../img/coupencode.jpg" alt="" class="w-100 h-100"></a>
+  </div>
+  <div id="main">
   <!-- Navigation bar -->
   <div class="navbar">
-
     <div class="header">
       <h1 class="header-heading">mart<span class="header-head">+</span></h1>
     </div>
-
     <div class="searchbar">
       <input type="search" name="" placeholder="Search the store" id="">
       <i class="bi bi-search search-icon text-dark"></i>
     </div>
-
     <div class="login-section">
       <div class="wishlist  d-flex align-items-center me-3">
         <!-- <i class="bi bi-sun-fill"></i>
@@ -101,9 +102,13 @@
       <button class="btn fw-bold text-light">ABOUT US</button>
       <button class="btn fw-bold text-light">CONTACT US</button>
     </div>
+    
     <div class="dark-mode d-flex align-items-center">
       <i class="bi bi-brightness-low-fill fs-4 me-2" id="dark-mode-icon" onclick="darkMode()"></i>
-      <span class="me-4 fw-bold darkMode" onclick="darkMode()" style="cursor: pointer;">Normal Mode</span>
+      <span class="me-4 fw-bold darkMode" onclick="darkMode()" style="cursor: pointer;">Dark Mode</span>
+      
+      <i class="bi bi-cloud-sun  me-2" onclick="getweather()"></i>
+      <span id="weather-details" class="me-4  fw-bold" onclick="getweather()" style="cursor: pointer;">Weather</span>
     </div>
   </div>
 
@@ -171,6 +176,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹45000</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹37999</span><br>
         <button class="add-btn">ADD TO CART</button>
+        <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"> <span class="sale">Sale</span></div>
@@ -183,6 +189,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹60000</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹44999</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"> <span class="sale">Sale</span></div>
@@ -195,6 +202,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹39999</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹29999</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div">
@@ -209,6 +217,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹21499</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹19499</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
 
     </div>
@@ -244,7 +253,6 @@
       <h6 class="my-3 fw-bold">Televisions</h6>
     </div>
   </div>
-  </div>
 
   <!-- Clothing section -->
   <div class="item-section">
@@ -267,6 +275,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹1000</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹799</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"><span class="sale">Sale</span></div>
@@ -282,6 +291,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹450</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹399</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"></div>
@@ -297,6 +307,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹1199</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹999</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"><span class="sale">Sale</span></div>
@@ -312,6 +323,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹899</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹399</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"><span class="sale">Sale</span></div>
@@ -327,6 +339,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹799</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹659</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
     </div>
   </div>
@@ -352,6 +365,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹30000</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹27899</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"></div>
@@ -367,6 +381,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹3495</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹2819</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"></div>
@@ -382,6 +397,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹3595</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹3174</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"></div>
@@ -397,6 +413,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹11899</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹8499</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"></div>
@@ -412,6 +429,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹2995</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹21399</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
     </div>
   </div>
@@ -440,6 +458,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹15999</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹12899</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"></div>
@@ -455,6 +474,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹13495</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹11999</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"></div>
@@ -470,6 +490,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹13595</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹9999</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"><span class="sale">Sale</span></div>
@@ -482,6 +503,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹14995</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹11399</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
       <div class="item-card">
         <div class="sale-div"><span class="sale">Sale</span></div>
@@ -494,6 +516,7 @@
         <span class="text-decoration-line-through me-1 text-secondary">₹17599</span><span
           class="text-secondary">from</span><span class="ms-2 fw-bold fs-5" style="color: red;">₹16999</span><br>
         <button class="add-btn">ADD TO CART</button>
+         <span class="add-cart" id="add-cart">Successfully added to cart</span>
       </div>
     </div>
   </div>
@@ -577,8 +600,11 @@
         <a class="text-white text-decoration-none" href="#">mart+.com</a>
       </div>
     </footer>
-
   </div>
+</div>
+  <script src="./firstPage.js"></script>
+  <!-- <script>
+    window.onload=loadCoupen();
+  </script> -->
 </body>
-
 </html>
