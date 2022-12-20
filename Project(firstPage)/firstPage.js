@@ -80,3 +80,28 @@ function darkMode() {
     }
 }
 
+//Star Rating
+let mainDiv = document.getElementsByClassName('star-icon')
+let star = document.getElementsByClassName('rating')
+let arr1 = []
+let arr2 = []
+for (const key in mainDiv) {
+    arr1.push(mainDiv[key].children);
+}
+arr1.map((data)=>{
+    for (const key in data) {
+        data[key].onclick = ()=>{
+        arr2=[]
+        for (const dkey in data) {
+            arr2.push(data[dkey])
+        }
+        for(let i = 0; i<=arr2.indexOf(data[key]); i++){
+            arr2[i].style.color = 'gold'
+            for(let j=arr2.indexOf(data[key])+1; j<arr2.length-3; j++) {
+            arr2[j].style.color = 'lightgray'
+        }
+        }
+       }
+    }
+})
+
