@@ -71,6 +71,9 @@ i{
     cursor: pointer;
 
 }
+.star-icon .rating{
+    color: lightgray;
+}
 
 .login-section i:hover, .dark-mode i:hover {
     transform: scale(1.1);
